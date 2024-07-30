@@ -3,54 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration Form</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .profile-image {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <form id="registrationForm">
-            <h1>User Registration</h1>
-            <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
+    <header class="bg-dark text-white text-center py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">My Blog</a>
+            <div class="collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <div class="form-group">
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
+            <img src="images/profile.jpg" alt="Profile" class="profile-image">
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <section id="home" class="my-4">
+            <h1>Welcome to My Blog</h1>
+            <p>This blog covers various topics related to technology, programming, and personal development. Explore the posts and enjoy the content!</p>
+        </section>
+
+        <section id="about" class="my-4">
+            <h2>About</h2>
+            <p>Hello! I am Bandarupalli Venkata Naga Sri Vyshnavi, a passionate fresher eager to kickstart my career in the fascinating world of Artificial Intelligence (AI), Machine Learning (ML), and Web Development. I have recently completed a certification in 'Introduction to AI' from Infosys Springboard and an AWS Skill Builder Course in Generative AI.</p>
+
+            <h3>My Journey into AI, ML, and Web Development</h3>
+            <p>My interest in AI and ML sparked during my undergraduate studies when I realized the potential of these technologies to transform industries and improve lives. Similarly, my enthusiasm for web development grew as I explored how websites can be powerful tools for communication and interaction. Since then, I have been dedicated to learning and mastering various aspects of AI, ML, and web development, driven by a desire to contribute to these exciting fields.</p>
+
+            <h3>Skills and Projects</h3>
+            <p>Throughout my learning journey, I have acquired a solid foundation in programming languages such as Python and JavaScript, and I am proficient in using frameworks like TensorFlow and PyTorch for AI/ML projects. In web development, I am skilled in HTML, CSS, and JavaScript, and I have experience with frameworks such as Bootstrap and React. I have worked on several projects, including developing a to-do list web application and creating interactive user registration forms, which have helped me hone my skills and apply theoretical knowledge to practical scenarios.</p>
+
+            <h3>Goals and Aspirations</h3>
+            <p>In the short term, I aim to deepen my understanding of AI, ML, and web development through hands-on projects and continuous learning. My long-term goal is to become a proficient engineer who can develop innovative solutions to real-world problems. I am particularly interested in exploring applications of AI in healthcare, finance, and education, as well as creating engaging and user-friendly web applications.</p>
+
+            <h3>Personal Interests</h3>
+            <p>Apart from my professional pursuits, I enjoy reading, traveling, and exploring new technologies. I am a simple, calm, and beautiful girl who believes in continuous growth and learning. I am excited about the endless possibilities that AI, ML, and web development offer and look forward to contributing to these transformative fields.</p>
+        </section>
+
+        <section id="blog" class="my-4">
+            <h2>Blog Posts</h2>
+            <div class="row" id="blog-posts">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="images/post1.jpg" alt="AI in Healthcare">
+                        <div class="card-body">
+                            <h5 class="card-title">AI in Healthcare</h5>
+                            <p class="card-text">The integration of AI in healthcare is revolutionizing the industry...</p>
+                            <a href="post1.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="images/post2.jpg" alt="Introduction to Machine Learning">
+                        <div class="card-body">
+                            <h5 class="card-title">Introduction to Machine Learning</h5>
+                            <p class="card-text">Machine Learning is a subset of artificial intelligence that focuses on building systems that learn from data...</p>
+                            <a href="post2.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-            </div>
-            <div class="form-group">
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select id="gender" name="gender" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>
-                    <input type="checkbox" id="terms" name="terms" required>
-                    I agree to the <a href="#">Terms and Conditions</a>
-                </label>
-            </div>
-            <button type="submit">Register</button>
-        </form>
-    </div>
-</body>
-</html>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or just want to say hello, feel free to reach out!</p>
+            <ul>
+                <li>Email: <a href="mailto:your-email@example.com">bvyshnavi951@gmail.com</a></li>
+                <li>Phone: <a href="tel:+1234567890">+91 9505150593</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/vyshnavi-bandarupalli/" target="_blank">Your LinkedIn Profile</a></li>
+            </ul>
+    
+            
+            <form action="your-form-handler-url" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </body>
+</html>    
